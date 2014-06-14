@@ -23,7 +23,6 @@ First declare ```CropActivity``` in your manifest file:
 ```
 
 ###Crop
-------------
 ```
 new Crop(inputUri).output(outputUri).quality(90).withMaxSize(maxWidth, maxHeight).start(activity);
 ```
