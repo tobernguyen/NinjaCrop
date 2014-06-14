@@ -18,17 +18,17 @@ Usage
 
 First declare ```CropActivity``` in your manifest file:
 
-```
+```java
 <activity android:name="gdg.ninja.croplib.CropActivity" >
 ```
 
 ###Crop
-```
+```java
 new Crop(inputUri).output(outputUri).quality(90).withMaxSize(maxWidth, maxHeight).start(activity);
 ```
 
 Listen for the result of the crop:
-```
+```java
 @Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data){
 	if(resultCode == RESULT_OK){
