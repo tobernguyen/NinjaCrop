@@ -28,13 +28,17 @@ new Crop(inputUri).output(outputUri).quality(90).withMaxSize(maxWidth, maxHeight
 
 Listen for the result of the crop:
 ```
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data){
-		if(resultCode == RESULT_OK){
-      if(requestCode == Crop.REQUEST_CROP){
-				Uri imgResult = data.getData();
-				mImgDemo.setImageURI(imgResult);
-			}
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data){
+	if(resultCode == RESULT_OK){
+		if(requestCode == Crop.REQUEST_CROP){
+			Uri croppedImageUri = data.getData();
+			//DO SOMETHING WITH croppedImageUri
 		}
 	}
+}
 ```
+
+How it look?
+==============
+![NinjaCrop](https://raw.githubusercontent.com/longtober/NinjaCrop/master/screenshot.png)
